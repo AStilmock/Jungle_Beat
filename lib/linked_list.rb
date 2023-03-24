@@ -1,17 +1,16 @@
 class LinkedList
-  attr_reader 
-  def initialize()
+  # attr_reader 
+  def initialize
     @head = nil
   end
 
-  def append(data)
-    head = Node.new(data)
-    if Node.new(data) == blank
-      nil
-    end
+  def head
+    @head
   end
 
-  # def append("")
+  def append(data)
+    data
+  end
 
-  # end
+
 end
