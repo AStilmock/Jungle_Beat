@@ -5,9 +5,8 @@ require './lib/linked_list'
 RSpec.describe LinkedList do
   it "exists" do
     list = LinkedList.new
-    # require 'pry'; binding.pry
+    
     expect(list).to be_an_instance_of(LinkedList)
-    expect(list = LinkedList.new).to eq(list)
   end
 
   it "Adds head data" do
@@ -22,9 +21,15 @@ RSpec.describe LinkedList do
     list = LinkedList.new
     list.append("doop")
     expect(list.append("doop")).to eq("doop")
-    require 'pry'; binding.pry
-    expect(list).to eq(<LinkedList node=)
+    expect(list).to be_an_instance_of(LinkedList)
+    expect(list.head).to be_an_instance_of(Node)
   end
 
+  it "Counts Node data" do
+    list = LinkedList.new
+
+
+    
+  end
 
 end
