@@ -5,11 +5,15 @@ class LinkedList
   end
 
   def append(data)
-    current_node = @head
     if @head == nil
       @head = Node.new(data)
     else
-      @head.next_node = Node.new(data)
+      previous_node = @head
+      new_node = Node.new(data)
+      while previous_node.next_node != nil
+        previous_node = previous_node.next_node
+      end
+      previous_node.next_node = new_node
     end
     data
   end
@@ -30,23 +34,35 @@ class LinkedList
   end
 
   def to_string
-    if @head.next_node == nil
-      @head.data
-    elsif
-      @head.next_node != nil && @head != nil
-      "#{@head.data} #{@head.next_node.data}"
+    sounds = []
+    current_node = @head
+    while current_node != nil
+      sounds << current_node.data
+      current_node = current_node.next_node
     end
+    sounds.join(" ")
   end
+  #   if @head.next_node == nil
+  #     @head.data
+  #   elsif
+  #     @head.next_node != nil && @head != nil
+  #     "#{@head.data} #{@head.next_node.data}"
+  #   end
+  # end
+  # until current_node == nil
+  #data << current.node
 #iterate through all instances of "data"
 # require 'pry'; binding.pry
 
-  # def prepend(data)
-  #   current_node = @head
-  #   if @head == nil
-  #     @head = Node.new(data)
-  #   else
-  #     @head.next_node.index(1) = Node.new(data)
-  #   end
-  # end
+  def prepend(data)
+    if @head == nil
+      @head = Node.new(data)
+    else 
+      old_head = @head
+      @head = Node.new(data)
+      @head.next_node = old_head
+    end
+    data
+  end
   
 end
