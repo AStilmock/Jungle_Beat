@@ -15,7 +15,6 @@ class LinkedList
   end
 
 
-
   def count
     if @head.nil?
       counter = 0
@@ -38,6 +37,16 @@ class LinkedList
       "#{@head.data} #{@head.next_node.data}"
     end
   end
+#iterate through all instances of "data"
+# require 'pry'; binding.pry
 
+  # def prepend(data)
+  #   current_node = @head
+  #   if @head == nil
+  #     @head = Node.new(data)
+  #   else
+  #     @head.next_node.index(1) = Node.new(data)
+  #   end
+  # end
   
 end
