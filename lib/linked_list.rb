@@ -11,18 +11,33 @@ class LinkedList
     else
       @head.next_node = Node.new(data)
     end
-    @head.data
+    data
   end
 
-  def count 
-    
+
+
+  def count
+    if @head.nil?
+      counter = 0
+    else
+      counter = 1
+      current_node = @head
+      while current_node.next_node != nil
+          current_node = current_node.next_node
+          counter += 1
+      end
+    end
+    counter
   end
 
   def to_string
-  
+    if @head.next_node == nil
+      @head.data
+    elsif
+      @head.next_node != nil && @head != nil
+      "#{@head.data} #{@head.next_node.data}"
+    end
   end
 
-
-
-
+  
 end

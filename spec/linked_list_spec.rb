@@ -27,9 +27,20 @@ RSpec.describe LinkedList do
 
   it "Counts Node data" do
     list = LinkedList.new
+    list.append("doop")
+    expect(list.count).to eq(1)
+    # require 'pry'; binding.pry
+    expect(list.to_string).to eq("doop")
+  end
+
+  it "Is a new LinkedList" do
+    list = LinkedList.new
+    list.append("doop")
+    list.append("deep")
+    list.to_string
+    expect(list.to_string).to eq("doop deep")
 
 
-    
   end
 
 end

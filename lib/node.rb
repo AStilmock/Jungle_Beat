@@ -5,8 +5,4 @@ class Node
     @data = data
     @next_node = nil
   end
-
-
-
-
 end
