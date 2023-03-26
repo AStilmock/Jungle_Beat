@@ -76,6 +76,22 @@ class LinkedList
     new_array.join(" ")
   end
 
-  def includes?
+  def includes?(data)
+    sounds = self.to_string
+    sounds.include?(data)
   end
+
+  def pop
+    current_node = @head
+    while current_node.next_node.next_node != nil
+        current_node = current_node.next_node
+    end
+    final_node = current_node.next_node
+    current_node.next_node = nil
+
+    final_node.data
+  end
+
+
+
 end

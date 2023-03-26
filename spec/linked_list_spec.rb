@@ -97,7 +97,24 @@ RSpec.describe LinkedList do
     list.append("shi")
     list.append("shu")
     list.append("blop")
+    list.includes?("shi")
+    expect(list.includes?("deep")).to eq(true)
+    expect(list.includes?("dep")).to eq(false)
+   
+  end
+
+  it "Removes nodes with pop method" do
     
+    list = LinkedList.new
+    list.append("deep")
+    list.append("woo")
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+    expect(list.pop).to eq("blop")
+    expect(list.pop).to eq("shu")
+    expect(list.to_string).to eq("deep woo shi")
+
   end
 
 end
