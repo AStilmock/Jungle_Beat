@@ -54,8 +54,16 @@ class LinkedList
   end
 
   def insert(position, data)
-    arr = [list.head]
-
+    current_node = @head
+    (position -1).times do
+      return "Error - List is too short" if current_node == nil
+      current_node = current_node.next_node
+    end
+    new_node = Node.new(data)
+    new_node.next_node = current_node.next_node
+    current_node.next_node = new_node
   end
+
+
   
 end
