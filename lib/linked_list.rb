@@ -64,14 +64,18 @@ class LinkedList
     current_node.next_node = new_node
   end
 
-  def find(position)
+  def find(position, returned_elements)
     current_node = @head
-    position.times do
-      current_node = current_node.next_node
+    new_array = []
+    returned_elements.times do
+      position.times do
+        current_node = current_node.next_node
+      end
+      new_array << current_node.data
     end
-    current_node.data
+    new_array.join(" ")
   end
 
-
-  
+  def includes?
+  end
 end
