@@ -54,8 +54,8 @@ class LinkedList
   end
 
   def insert(position, data)
-    arr = [list]
-    
+    arr = [list.head]
+
   end
   
 end
