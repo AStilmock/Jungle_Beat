@@ -76,7 +76,8 @@ RSpec.describe LinkedList do
 
   end
 
-  it "Makes another list" do
+  it "Finds an element in a list" do
+
     list = LinkedList.new
     list.append("deep")
     list.append("woo")
