@@ -63,5 +63,7 @@ RSpec.describe LinkedList do
     list.append("plop")
     list.append("suu")
     list.prepend("dop")
+    require 'pry'; binding.pry
+  end
 
 end

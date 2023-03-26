@@ -18,7 +18,6 @@ class LinkedList
     data
   end
 
-
   def count
     if @head.nil?
       counter = 0
@@ -42,17 +41,6 @@ class LinkedList
     end
     sounds.join(" ")
   end
-  #   if @head.next_node == nil
-  #     @head.data
-  #   elsif
-  #     @head.next_node != nil && @head != nil
-  #     "#{@head.data} #{@head.next_node.data}"
-  #   end
-  # end
-  # until current_node == nil
-  #data << current.node
-#iterate through all instances of "data"
-# require 'pry'; binding.pry
 
   def prepend(data)
     if @head == nil
@@ -63,6 +51,11 @@ class LinkedList
       @head.next_node = old_head
     end
     data
+  end
+
+  def insert(position, data)
+    arr = [list]
+    
   end
   
 end
