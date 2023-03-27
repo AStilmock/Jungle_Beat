@@ -32,4 +32,12 @@ RSpec.describe JungleBeat do
 
   end
 
+  it "Plays the Jungle Beat sounds" do
+
+    jb = JungleBeat.new
+    jb.append("deep doo ditt woo hoo shu")
+    jb.play
+   
+  end
+
 end
