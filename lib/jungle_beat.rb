@@ -1,11 +1,9 @@
 class JungleBeat
 
-  attr_accessor :list
+  attr_reader :list
   def initialize
     @list = LinkedList.new
   end
-
-  #split data string in append method
 
   def append(data)
     array = data.split
