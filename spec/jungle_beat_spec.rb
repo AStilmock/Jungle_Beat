@@ -40,4 +40,12 @@ RSpec.describe JungleBeat do
    
   end
 
+  xit "Validates the Jungle Beats" do
+    require 'pry'; binding.pry
+    jb = JungleBeat.new("deep")
+  
+    
+
+  end
+
 end
